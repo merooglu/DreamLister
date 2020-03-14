@@ -10,8 +10,12 @@ import UIKit
 
 class ItemCell: UITableViewCell {
 
-    override func awakeFromNib() {
+    @IBOutlet weak var tumbnailImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    override class func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 }

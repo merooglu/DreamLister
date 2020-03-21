@@ -15,7 +15,10 @@ class ItemCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    override class func awakeFromNib() {
-        super.awakeFromNib()
+    func configureCell(item: Item) {
+        titleLabel.text = item.title
+        priceLabel.text = "$\(item.price)"
+        descriptionLabel.text = item.details
+        tumbnailImageView.image = item.toImage?.image as? UIImage
     }
 }
